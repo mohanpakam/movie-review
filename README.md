@@ -1,6 +1,4 @@
-Feature: Movie Review Application
-
-#Requirements 
+# Requirements 
 Below are the requirements of the project
 1 - Scenario: User Registration
 
@@ -50,8 +48,8 @@ Below are the requirements of the project
     When: 	viewing a movie's details
     Then: 	the list of reviewers should include the names of users who reviewed the movie
 
-#Technology Stack
-1 - Spring Boot
-2 - React JS
-3 - Docker
-4 - MongoDB
+# Technology Stack
+1. Spring Boot
+2. React JS
+3. Docker
+4. MongoDB
