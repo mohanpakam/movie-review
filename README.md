@@ -93,6 +93,22 @@ AC12: **Sign Out**
 
 # Note Worthy Mentions
 
+Certainly! Here's a cleaner version of your key notes:
+
+**Backend Key Notes:**
+1. Utilizes Spring Boot 3 and MongoDB with Reactive Programming.
+2. Employs Enum-based Exception Handling for robust error management.
+3. Comprehensive Junit test coverage for all services.
+4. Real-time IMDB movie name lookup for enhanced user experience.
+5. Implements a many-to-many relationship between movies and users.
+6. Utilizes Cloud-based MongoDB (Atlas) for data storage.
+
+**Frontend Key Notes:**
+1. Developed with ReactJS, Bootstrap, and Jest for a modern and responsive UI.
+2. Thorough unit test coverage for essential components.
+3. Offers OAuth with Google for secure and seamless user authentication.
+
+
 # Installation
 
 # Comments
