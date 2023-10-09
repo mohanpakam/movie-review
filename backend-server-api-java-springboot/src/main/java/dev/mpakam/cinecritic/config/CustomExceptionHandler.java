@@ -6,6 +6,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
+/**
+ * Handles the CustomException and returns an error response.
+ *
+ * @param ex The CustomException to handle.
+ * @return The ResponseEntity containing the error response.
+ */
 @ControllerAdvice
 public class CustomExceptionHandler {
     @ExceptionHandler(CustomException.class)
