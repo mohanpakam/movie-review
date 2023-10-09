@@ -1,0 +1,17 @@
+spring:
+  data:
+    mongodb:
+    database: moviereviews
+    uri: mongodb+srv://mohaneee221:8d7hAbJEeOGB0DAe@moviereviews.wdt3wjg.mongodb.net/?retryWrites=true&w=majority
+omdb:
+  api:
+  key: d507a1af
+  baseUrl: http://www.omdbapi.com
+logging:
+  level:
+    org:
+    springframework:
+      data:
+        mongodb:
+          core:
+            MongoTemplate: DEBUG

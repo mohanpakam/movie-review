@@ -1,0 +1,12 @@
+.heart-rating {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .heart-icon {
+    cursor: pointer;
+  }
+  
+  .selected {
+    color: red;
+  }

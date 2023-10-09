@@ -1,88 +1,98 @@
-# Movie Review App
+# Requirements 
 
-Welcome to the Movie Review App repository! This full-stack application is built using Java Spring Boot for the backend API and ReactJS for the frontend user interface. The backend utilizes MongoDB Atlas cloud as the database to store and manage movie data and user reviews.
-
-## Demo:
-#### Desktop View
-![image](https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs/assets/65951872/3c1a2734-880d-4bd1-8259-6c9933487fb3)
-#### Mobile View:
-Mobile Responsive
-
-![image](https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs/assets/65951872/3150c436-62cf-44a7-9399-f056ab6e0ec8)
-#### Writing Reviews:
-![image](https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs/assets/65951872/4d2264de-a891-4e51-a63a-5f11fb2acc59)
-
-### Watch Vides Fetched From Youtube and Write reviews:
-![image](https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs/assets/65951872/4c687d94-913d-4e87-99be-3b1cb49fc497)
-
-## Top Features
-
-- **User Authentication**: Secure user authentication system to allow users to create accounts, log in, and manage their profiles.
-- **Browse Movies**: Users can explore a vast collection of movies with detailed information.
-- **Search Functionality**: A powerful search feature enables users to find movies based on titles, genres, actors, and more.
-- **Write Reviews**: Registered users can write and submit reviews for their favorite movies.
-- **Rating System**: Users can rate movies and view the average rating given by other users.
-- **Responsive UI**: The user interface is responsive and optimized for various devices, ensuring a seamless user experience.
-
-## Installation Steps
-
-### Backend (Java Spring Boot)
-
-1. **Clone the repository:**
- 
-git clone [https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs.git](https://github.com/SiddheshKukade/Movie-review-full-stack-java-spring-boot-reactjs/edit/master/README.md)
+	Please create and share via github a project that implements a simple CRUD system. That is to say, create a UI that connects to middleware that connects to a data store, and is capable of creating, updating, deleting and listing data.
+	An HTML based UI that is implemented with:
+	AngularJS (or React or even jQuery) for SPA (or another front end)
+	Bootstrap for styling (or some other modern UI styling/component framework)
+	Unit, Functional and/or End to End tests in any framework
  
 
-2. **Navigate to the backend directory:**
- ```
-cd movie-review-app/backend
-
- ```
-
-3. **Set up MongoDB Atlas:**
-- Create an account on [MongoDB Atlas](https://www.mongodb.com/cloud/atlas).
-- Create a new cluster and obtain the connection string.
-
-4. **Configure MongoDB Connection:**
-- Replace `<mongo_connection_string>` in `application.properties` with your MongoDB connection string.
-
-5. **Run the Spring Boot Application:**
- ```
-./mvnw spring-boot:run
+	Middleware that models at least two entities in a master detail relationship and is called from the UI above
+	Use Spring Boot, or legacy Spring, or any modern application framework
+	Model any master detail relationship, i.e. Customers -> Addresses or Foo -> Bar  ( bonus points if you model a many to many relationship, i.e. Addresses <- Customers <-> Offices -> Addresses )
+	Provide a REST like API to the UI (at least implement GET and POST, PUT and DELETE optional) that exposes CRUD functionality
+	Some unit tests from any test framework (JUnit, TestNG, Spock etc)
  
-```
-6. The backend server should now be running at `http://localhost:8080`.
+	A data store to back the model from the middleware
 
-### Frontend (ReactJS)
+	It can be in memory like H2 or Schemaless like MongoDB or Redis or structured like any-SQL, if required provide any scripts to create the data structures/tables
 
-1. **Navigate to the frontend directory:**
- ```
-cd movie-review-app/frontend
- ```
+	Below are the requirements of the project
+	Here are the revised and corrected sentences:
 
-2. **Install dependencies:**
- ```
-npm install
- ```
+# Scope of Work
+Design and develop a "Movie Review/Watchlist" Web application where a User can Login using Google Authentication, Search for Movies, Leave a review and Maintain a Watchlist of Favourite movies.
 
-3. **Set up environment variables:**
-- Create a `.env` file in the frontend directory.
-- Add the following line to the `.env` file and replace `<backend_api_url>` with the actual backend API URL (e.g., `http://localhost:8080`):
- 
-REACT_APP_API_URL=<backend_api_url>
- 
+AC1: **Public Page to Display "Disney" Movies by Default**
+   - **Given:** A guest.
+   - **When:** They land on the home page.
+   - **Then:** Ten movies should be visible by default when searching for the keyword "Disney."
 
-4. **Run the React App:**
+AC2: **View Reviews About a Movie**
+   - **Given:** A guest.
+   - **When:** They click on a movie poster.
+   - **Then:** Display all reviews for that movie.
 
-```
-npm start
- ```
+AC3: **Search for a Movie**
+   - **Given:** A guest.
+   - **When:** They enter a name in the "Search" box.
+   - **Then:** Display ten movies that contain the entered name.
 
-5. The React app should now be running at `http://localhost:3000`.
+AC4: **Google Login**
+   - **Given:** A guest.
+   - **When:** They click the "Sign In" button at the top right corner.
+   - **Then:** The guest should be able to successfully log in to the "Movie Reviewer" app after authenticating with Google.
 
-## Contributing
+AC5: **Watchlist Page**
+   - **Given:** A guest.
+   - **When:** They successfully log in to the app.
+   - **Then:** Display the same results that were shown based on the search or default "Disney" movies.
+   - **And:** Each tile should display an "Add to Watchlist" button if the movie is not in the user's watchlist.
+   - **And:** Each tile should display a "Remove from Watchlist" button if the movie is in the watchlist.
 
-If you want to contribute to this project and make it better, your help is very welcome. Create a pull request with your proposed changes, and we will review it as soon as possible.
+AC6: **Ability to Add to Watchlist**
+   - **Given:** A user.
+   - **When:** They click the "Add to Watchlist" button.
+   - **Then:** Add that movie to the user's watchlist.
 
-Happy coding! 🚀
-@SiddheshKukade
+AC7: **Ability to Remove from Watchlist on Search Screen**
+   - **Given:** A user.
+   - **When:** They click the "Remove from Watchlist" button.
+   - **Then:** Remove that movie from the user's watchlist.
+
+AC8: **Display All Watchlist Items on Watchlist Screen**
+   - **Given:** A user.
+   - **When:** They click the "Watchlist" link in the header section.
+   - **Then:** Display all the movies that the user added to their watchlist.
+
+AC9: **Ability to Remove from Watchlist on Watchlist Screen**
+   - **Given:** A user.
+   - **When:** They click the "Remove from Watchlist" button.
+   - **Then:** Remove that movie from the user's watchlist.
+
+AC10: **Rate a Movie**
+   - **Given:** A user.
+   - **When:** They click on a movie poster.
+   - **Then:** Display a form where the user can rate the movie (out of 5), enter a comment, and submit, if the user hasn't already written a review for that movie.
+
+AC11: **Restrict Users from Entering Multiple Reviews**
+   - **Given:** A user.
+   - **When:** They click on a movie poster for which they have previously written a review.
+   - **Then:** Display reviews from all users, including the logged-in user.
+
+AC12: **Sign Out**
+   - **Given:** A user.
+   - **When:** They click the "Sign Out" button.
+   - **Then:** Navigate to the Search/Home page, including any search results.
+
+# Technology Stack
+1. Spring Boot
+2. React JS
+3. Docker
+4. MongoDB
+
+# Note Worthy Mentions
+
+# Installation
+
+# Comments
